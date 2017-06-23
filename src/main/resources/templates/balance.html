@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="ATMHome :: head">
+<meta charset="UTF-8" />
+<title>Balance Page</title>
+</head>
+<body>
+	<div class="container">
+		<h1>Balance History</h1>
+		<table class="table table-striped">
+			<tr>
+				<td>account number</td>
+				<td>balance</td>
+			</tr>
+			<tr th:each="item : ${balanceList}">
+				<td th:text="${item.accountNumber}"></td>
+				<td th:text="${item.balance}"></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
